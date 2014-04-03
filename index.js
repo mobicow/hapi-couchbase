@@ -13,5 +13,4 @@ exports.register = function (plugin, options, next) {
     buckets[options.bucket] = new couchbase.Connection(options);
     plugin.expose('cb_'+options.bucket, buckets[options.bucket]);
     next();
-
 }

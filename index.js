@@ -4,13 +4,15 @@ exports.register = function (plugin, options, next) {
 
     console.log("couchbase plugin registered")
 
-    if(!options.host) {
+    for(var i in options){
+    if(!options[i].host) {
         throw new Error("Couchbase host not defined in config")
     }
-    if(!options.bucket) {
+    if(!options[i].bucket) {
         throw new Error("Couchbase bucket not defined in config")
     }
-    buckets[options.bucket] = new couchbase.Connection(options);
-    plugin.expose('cb_'+options.bucket, buckets[options.bucket]);
+    buckets[options[i].bucket] = new couchbase.Connection(options[i]);
+    plugin.expose(options[i].bucket, buckets[options[i].bucket]);
+    }
     next();
 }

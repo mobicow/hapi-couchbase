@@ -1,13 +1,26 @@
 {
     "name": "hapi-couchbase",
     "version": "0.0.1",
-    "description": "",
+    "keywords": [
+        "hapijs",
+        "couchbase"
+    ],
+    "description": "Simple couchbase plugin for hapijs",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Mobicow",
     "license": "ISC",
+    "homepage": "https://github.com/mobicow/hapi-couchbase",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mobicow/hapi-couchbase.git",
+        "web": "https://github.com/mobicow/hapi-couchbase.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mobicow/hapi-couchbase/issues"
+    },
     "dependencies": {
         "couchbase": "~1.2.1"
     }
